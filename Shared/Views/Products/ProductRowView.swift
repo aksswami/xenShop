@@ -13,9 +13,9 @@ struct ProductRowView: View {
     
     var body: some View {
         ZStack {
-            //            NavigationLink(destination: ItemDetailsView(show: self.$show, cloth: cloth), isActive: self.$show) {
-            //                Text("")
-            //            }
+            NavigationLink(destination: ProductDetailView(product: product), isActive: self.$show) {
+                Text("")
+            }
             VStack(alignment: .leading) {
                 AsyncImage(url: product.image) { image in
                     image.resizable()
