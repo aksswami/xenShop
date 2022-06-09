@@ -37,7 +37,7 @@ struct ProductRowView: View {
                     .foregroundColor(XenColor.secondaryBlack)
                     .padding([.horizontal], 10)
                 HStack {
-                    Text("S$\(product.price)")
+                    Text(product.presentablePrice)
                         .font(.system(size: 14, weight: .bold, design: .default))
                         .foregroundColor(XenColor.primaryBlack)
                 }

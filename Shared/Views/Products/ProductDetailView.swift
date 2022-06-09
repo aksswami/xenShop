@@ -41,7 +41,7 @@ struct ProductDetailView: View {
                                         .padding([.horizontal], 15)
                                         .padding(.bottom, 5)
                                     Spacer()
-                                    Text("S$\(product.price)")
+                                    Text(product.presentablePrice)
                                         .font(.system(size: 14, weight: .semibold, design: .default))
                                         .foregroundColor(.gray)
                                         .padding([.horizontal], 15)

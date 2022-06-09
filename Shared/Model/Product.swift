@@ -31,6 +31,10 @@ struct Product: Codable {
     var image: URL?
     var rating: Rating
     
+    var presentablePrice: String {
+        return String(format: "S$%.2f", price)
+    }
+    
     
     struct Rating: Codable {
         var rate: Float
