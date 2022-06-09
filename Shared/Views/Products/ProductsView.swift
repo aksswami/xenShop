@@ -23,7 +23,6 @@ struct ProductsView: View {
                                 .frame(width: geometry.size.width/2.0, height: 255, alignment: .center)
                         }
                     }
-//                    .padding(EdgeInsets(top: 0, leading: 16.0, bottom: 0, trailing: 16.0))
                 }
             }
             .navigationBarTitle("xenShop")

@@ -17,13 +17,16 @@ struct ProductRowView: View {
             //                Text("")
             //            }
             VStack(alignment: .leading) {
-                Image("ProductA")
-                    .renderingMode(.original)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: UIScreen.main.bounds.width / 2, height: 190)
-                    .padding(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
-                    .cornerRadius(0)
+                AsyncImage(url: product.image) { image in
+                    image.resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .padding(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+                        .cornerRadius(0)
+                } placeholder: {
+                    ActivityIndicatorView()
+                        .frame(width: 40, height: 40, alignment: .topLeading)
+                    
+            }.frame(width: UIScreen.main.bounds.width / 2, height: 190)
                 
                 Text(product.title)
                     .font(.system(size: 14, weight: .semibold, design: .default))
@@ -41,7 +44,6 @@ struct ProductRowView: View {
                 .padding([.leading, .trailing], 10)
                 Spacer()
             }
-//            .frame(width: 170, height: 255)
             .background(Color.clear)
             .clipped()
             .onTapGesture {
