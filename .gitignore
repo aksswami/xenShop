@@ -1,0 +1,39 @@
+# Mac OS X
+*.DS_Store
+
+#AppCode
+.idea
+atlassian-ide-plugin.xml
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+*.xcbkptlist
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+
+# Generated files
+build/
+*.pyc
+DerivedData/
+
+# Cocoa Pods
+Pods/
+IDEWorkspaceChecks.plist
+
+# Fastlane
+fastlane/archives.xcarchive
+fastlane/builds/
+fastlane/release_note/
+fastlane/test_output/
+fastlane/report.xml
+.bundle/
+vendor/
+xcov_report
+
+swiftlint.result.*
+*/slather/*
