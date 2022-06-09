@@ -17,6 +17,14 @@
 		087438D4285239B500AA432E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438AA285239B200AA432E /* ContentView.swift */; };
 		087438D5285239B500AA432E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 087438AB285239B500AA432E /* Assets.xcassets */; };
 		087438D6285239B500AA432E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 087438AB285239B500AA432E /* Assets.xcassets */; };
+		087438E828523CA300AA432E /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438E728523CA300AA432E /* ProductsView.swift */; };
+		087438E928523CA300AA432E /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438E728523CA300AA432E /* ProductsView.swift */; };
+		087438EB28523CCF00AA432E /* ProductRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438EA28523CCF00AA432E /* ProductRowView.swift */; };
+		087438EC28523CCF00AA432E /* ProductRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438EA28523CCF00AA432E /* ProductRowView.swift */; };
+		087438EF28523CFC00AA432E /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438EE28523CFC00AA432E /* Products.swift */; };
+		087438F028523CFC00AA432E /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438EE28523CFC00AA432E /* Products.swift */; };
+		087438F228523DC400AA432E /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438F128523DC400AA432E /* Cart.swift */; };
+		087438F328523DC400AA432E /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438F128523DC400AA432E /* Cart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,10 @@
 		087438C9285239B500AA432E /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		087438CD285239B500AA432E /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		087438CF285239B500AA432E /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		087438E728523CA300AA432E /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
+		087438EA28523CCF00AA432E /* ProductRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRowView.swift; sourceTree = "<group>"; };
+		087438EE28523CFC00AA432E /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		087438F128523DC400AA432E /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,7 @@
 		087438A8285239B200AA432E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				087438E528523C7D00AA432E /* Views */,
 				087438A9285239B200AA432E /* xenShopApp.swift */,
 				087438AA285239B200AA432E /* ContentView.swift */,
 				087438AB285239B500AA432E /* Assets.xcassets */,
@@ -139,6 +152,33 @@
 				087438CF285239B500AA432E /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		087438E528523C7D00AA432E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				087438ED28523CF000AA432E /* Model */,
+				087438E628523C8A00AA432E /* Products */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		087438E628523C8A00AA432E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				087438E728523CA300AA432E /* ProductsView.swift */,
+				087438EA28523CCF00AA432E /* ProductRowView.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		087438ED28523CF000AA432E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				087438EE28523CFC00AA432E /* Products.swift */,
+				087438F128523DC400AA432E /* Cart.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,7 +340,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				087438D3285239B500AA432E /* ContentView.swift in Sources */,
+				087438F228523DC400AA432E /* Cart.swift in Sources */,
 				087438D1285239B500AA432E /* xenShopApp.swift in Sources */,
+				087438EF28523CFC00AA432E /* Products.swift in Sources */,
+				087438E828523CA300AA432E /* ProductsView.swift in Sources */,
+				087438EB28523CCF00AA432E /* ProductRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +353,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				087438D4285239B500AA432E /* ContentView.swift in Sources */,
+				087438F328523DC400AA432E /* Cart.swift in Sources */,
 				087438D2285239B500AA432E /* xenShopApp.swift in Sources */,
+				087438F028523CFC00AA432E /* Products.swift in Sources */,
+				087438E928523CA300AA432E /* ProductsView.swift in Sources */,
+				087438EC28523CCF00AA432E /* ProductRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
