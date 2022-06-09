@@ -31,6 +31,7 @@ struct Product: Codable {
     var image: URL?
     var rating: Rating
     
+    
     struct Rating: Codable {
         var rate: Float
         var count: Int

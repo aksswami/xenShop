@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08552D8C2852526000B3CD1C /* ProductsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08552D8B2852526000B3CD1C /* ProductsFetcher.swift */; };
+		08552D8D2852526000B3CD1C /* ProductsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08552D8B2852526000B3CD1C /* ProductsFetcher.swift */; };
+		08552D902852555100B3CD1C /* XenColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08552D8F2852555100B3CD1C /* XenColor.swift */; };
+		08552D912852555100B3CD1C /* XenColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08552D8F2852555100B3CD1C /* XenColor.swift */; };
 		087438C2285239B500AA432E /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438C1285239B500AA432E /* Tests_iOS.swift */; };
 		087438C4285239B500AA432E /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438C3285239B500AA432E /* Tests_iOSLaunchTests.swift */; };
 		087438CE285239B500AA432E /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438CD285239B500AA432E /* Tests_macOS.swift */; };
@@ -21,8 +25,6 @@
 		087438E928523CA300AA432E /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438E728523CA300AA432E /* ProductsView.swift */; };
 		087438EB28523CCF00AA432E /* ProductRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438EA28523CCF00AA432E /* ProductRowView.swift */; };
 		087438EC28523CCF00AA432E /* ProductRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438EA28523CCF00AA432E /* ProductRowView.swift */; };
-		087438EF28523CFC00AA432E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438EE28523CFC00AA432E /* Product.swift */; };
-		087438F028523CFC00AA432E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438EE28523CFC00AA432E /* Product.swift */; };
 		087438F228523DC400AA432E /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438F128523DC400AA432E /* Cart.swift */; };
 		087438F328523DC400AA432E /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438F128523DC400AA432E /* Cart.swift */; };
 		087438F528523E7100AA432E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438F428523E7100AA432E /* NetworkManager.swift */; };
@@ -33,6 +35,8 @@
 		087439002852458800AA432E /* XenShopAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438FE2852458800AA432E /* XenShopAPI.swift */; };
 		0874390228524AF900AA432E /* XenShopError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0874390128524AF900AA432E /* XenShopError.swift */; };
 		0874390328524AF900AA432E /* XenShopError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0874390128524AF900AA432E /* XenShopError.swift */; };
+		0874390528524E3100AA432E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0874390428524E3100AA432E /* Product.swift */; };
+		0874390628524E3100AA432E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0874390428524E3100AA432E /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08552D8B2852526000B3CD1C /* ProductsFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsFetcher.swift; sourceTree = "<group>"; };
+		08552D8F2852555100B3CD1C /* XenColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XenColor.swift; sourceTree = "<group>"; };
 		087438A9285239B200AA432E /* xenShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xenShopApp.swift; sourceTree = "<group>"; };
 		087438AA285239B200AA432E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		087438AB285239B500AA432E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,11 +73,11 @@
 		087438CF285239B500AA432E /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		087438E728523CA300AA432E /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
 		087438EA28523CCF00AA432E /* ProductRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRowView.swift; sourceTree = "<group>"; };
-		087438EE28523CFC00AA432E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		087438F128523DC400AA432E /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		087438F428523E7100AA432E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		087438FE2852458800AA432E /* XenShopAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XenShopAPI.swift; sourceTree = "<group>"; };
 		0874390128524AF900AA432E /* XenShopError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XenShopError.swift; sourceTree = "<group>"; };
+		0874390428524E3100AA432E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08552D8E2852554000B3CD1C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				08552D8F2852555100B3CD1C /* XenColor.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		087438A3285239B200AA432E = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +136,7 @@
 		087438A8285239B200AA432E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				08552D8E2852554000B3CD1C /* Helper */,
 				087438FD2852456800AA432E /* Network */,
 				087438ED28523CF000AA432E /* Model */,
 				087438E528523C7D00AA432E /* Views */,
@@ -182,6 +197,7 @@
 			children = (
 				087438E728523CA300AA432E /* ProductsView.swift */,
 				087438EA28523CCF00AA432E /* ProductRowView.swift */,
+				08552D8B2852526000B3CD1C /* ProductsFetcher.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -189,8 +205,8 @@
 		087438ED28523CF000AA432E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				087438EE28523CFC00AA432E /* Product.swift */,
 				087438F128523DC400AA432E /* Cart.swift */,
+				0874390428524E3100AA432E /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -318,7 +334,6 @@
 			);
 			mainGroup = 087438A3285239B200AA432E;
 			packageReferences = (
-				087438F7285243B100AA432E /* XCRemoteSwiftPackageReference "Moya" */,
 				087438F8285244D100AA432E /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 087438B1285239B500AA432E /* Products */;
@@ -372,14 +387,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				087438D3285239B500AA432E /* ContentView.swift in Sources */,
+				08552D902852555100B3CD1C /* XenColor.swift in Sources */,
 				087438F228523DC400AA432E /* Cart.swift in Sources */,
+				0874390528524E3100AA432E /* Product.swift in Sources */,
 				087438FF2852458800AA432E /* XenShopAPI.swift in Sources */,
 				087438F528523E7100AA432E /* NetworkManager.swift in Sources */,
 				087438D1285239B500AA432E /* xenShopApp.swift in Sources */,
-				087438EF28523CFC00AA432E /* Product.swift in Sources */,
 				0874390228524AF900AA432E /* XenShopError.swift in Sources */,
 				087438E828523CA300AA432E /* ProductsView.swift in Sources */,
 				087438EB28523CCF00AA432E /* ProductRowView.swift in Sources */,
+				08552D8C2852526000B3CD1C /* ProductsFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,14 +405,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				087438D4285239B500AA432E /* ContentView.swift in Sources */,
+				08552D912852555100B3CD1C /* XenColor.swift in Sources */,
 				087438F328523DC400AA432E /* Cart.swift in Sources */,
+				0874390628524E3100AA432E /* Product.swift in Sources */,
 				087439002852458800AA432E /* XenShopAPI.swift in Sources */,
 				087438F628523E7100AA432E /* NetworkManager.swift in Sources */,
 				087438D2285239B500AA432E /* xenShopApp.swift in Sources */,
-				087438F028523CFC00AA432E /* Product.swift in Sources */,
 				0874390328524AF900AA432E /* XenShopError.swift in Sources */,
 				087438E928523CA300AA432E /* ProductsView.swift in Sources */,
 				087438EC28523CCF00AA432E /* ProductRowView.swift in Sources */,
+				08552D8D2852526000B3CD1C /* ProductsFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +488,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -527,6 +547,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -779,14 +800,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		087438F7285243B100AA432E /* XCRemoteSwiftPackageReference "Moya" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Moya/Moya";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
 		087438F8285244D100AA432E /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya";
