@@ -11,6 +11,8 @@
 		08552D8D2852526000B3CD1C /* ProductsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08552D8B2852526000B3CD1C /* ProductsFetcher.swift */; };
 		08552D902852555100B3CD1C /* XenColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08552D8F2852555100B3CD1C /* XenColor.swift */; };
 		08552D912852555100B3CD1C /* XenColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08552D8F2852555100B3CD1C /* XenColor.swift */; };
+		08552D9628525C2C00B3CD1C /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08552D9528525C2C00B3CD1C /* TabbarView.swift */; };
+		08552D9728525C2C00B3CD1C /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08552D9528525C2C00B3CD1C /* TabbarView.swift */; };
 		087438C2285239B500AA432E /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438C1285239B500AA432E /* Tests_iOS.swift */; };
 		087438C4285239B500AA432E /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438C3285239B500AA432E /* Tests_iOSLaunchTests.swift */; };
 		087438CE285239B500AA432E /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438CD285239B500AA432E /* Tests_macOS.swift */; };
@@ -59,6 +61,7 @@
 /* Begin PBXFileReference section */
 		08552D8B2852526000B3CD1C /* ProductsFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsFetcher.swift; sourceTree = "<group>"; };
 		08552D8F2852555100B3CD1C /* XenColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XenColor.swift; sourceTree = "<group>"; };
+		08552D9528525C2C00B3CD1C /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		087438A9285239B200AA432E /* xenShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xenShopApp.swift; sourceTree = "<group>"; };
 		087438AA285239B200AA432E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		087438AB285239B500AA432E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -188,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				087438E628523C8A00AA432E /* Products */,
+				08552D9528525C2C00B3CD1C /* TabbarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -392,6 +396,7 @@
 				0874390528524E3100AA432E /* Product.swift in Sources */,
 				087438FF2852458800AA432E /* XenShopAPI.swift in Sources */,
 				087438F528523E7100AA432E /* NetworkManager.swift in Sources */,
+				08552D9628525C2C00B3CD1C /* TabbarView.swift in Sources */,
 				087438D1285239B500AA432E /* xenShopApp.swift in Sources */,
 				0874390228524AF900AA432E /* XenShopError.swift in Sources */,
 				087438E828523CA300AA432E /* ProductsView.swift in Sources */,
@@ -410,6 +415,7 @@
 				0874390628524E3100AA432E /* Product.swift in Sources */,
 				087439002852458800AA432E /* XenShopAPI.swift in Sources */,
 				087438F628523E7100AA432E /* NetworkManager.swift in Sources */,
+				08552D9728525C2C00B3CD1C /* TabbarView.swift in Sources */,
 				087438D2285239B500AA432E /* xenShopApp.swift in Sources */,
 				0874390328524AF900AA432E /* XenShopError.swift in Sources */,
 				087438E928523CA300AA432E /* ProductsView.swift in Sources */,

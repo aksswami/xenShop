@@ -21,27 +21,27 @@ struct ProductRowView: View {
                     .renderingMode(.original)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: UIScreen.main.bounds.width / 2 - 40, height: 190)
+                    .frame(width: UIScreen.main.bounds.width / 2, height: 190)
                     .padding(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
-                    .cornerRadius(5)
+                    .cornerRadius(0)
                 
                 Text(product.title)
                     .font(.system(size: 14, weight: .semibold, design: .default))
                     .foregroundColor(XenColor.secondaryBlack)
-                    .padding([.horizontal], 5)
+                    .padding([.horizontal], 10)
                 Text(product.category)
                     .font(.caption)
                     .foregroundColor(XenColor.secondaryBlack)
-                    .padding([.horizontal], 5)
+                    .padding([.horizontal], 10)
                 HStack {
                     Text("S$\(product.price)")
                         .font(.system(size: 14, weight: .bold, design: .default))
                         .foregroundColor(XenColor.primaryBlack)
                 }
-                .padding([.leading, .trailing], 5)
+                .padding([.leading, .trailing], 10)
                 Spacer()
             }
-            .frame(width: 170, height: 255)
+//            .frame(width: 170, height: 255)
             .background(Color.clear)
             .clipped()
             .onTapGesture {

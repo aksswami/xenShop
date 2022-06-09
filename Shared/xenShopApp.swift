@@ -13,7 +13,7 @@ struct xenShopApp: App {
     @StateObject private var fetcher = ProductsFetcher()
     var body: some Scene {
         WindowGroup {
-            ProductsView()
+            TabbarView()
                 .environmentObject(fetcher)
         }
     }
