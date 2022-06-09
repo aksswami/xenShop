@@ -10,6 +10,7 @@ import Moya
 
 enum XenShopAPI: TargetType {
     case products
+    case categories
     case product(id: Int)
     case cart(userId: Int)
     
@@ -17,6 +18,8 @@ enum XenShopAPI: TargetType {
         switch self {
         case .products:
             return "products"
+        case .categories:
+            return "products/categories"
         case .product(id: let id):
             return "products/\(id)"
         case .cart:
@@ -39,7 +42,7 @@ enum XenShopAPI: TargetType {
     
     var task: Task {
         switch self {
-        case .products, .product:
+        case .products, .categories, .product:
             return .requestPlain
         case .cart(userId: let userId):
             return .requestParameters(parameters: ["userId": userId], encoding: URLEncoding.queryString)
