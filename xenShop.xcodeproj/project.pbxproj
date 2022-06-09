@@ -21,10 +21,18 @@
 		087438E928523CA300AA432E /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438E728523CA300AA432E /* ProductsView.swift */; };
 		087438EB28523CCF00AA432E /* ProductRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438EA28523CCF00AA432E /* ProductRowView.swift */; };
 		087438EC28523CCF00AA432E /* ProductRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438EA28523CCF00AA432E /* ProductRowView.swift */; };
-		087438EF28523CFC00AA432E /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438EE28523CFC00AA432E /* Products.swift */; };
-		087438F028523CFC00AA432E /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438EE28523CFC00AA432E /* Products.swift */; };
+		087438EF28523CFC00AA432E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438EE28523CFC00AA432E /* Product.swift */; };
+		087438F028523CFC00AA432E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438EE28523CFC00AA432E /* Product.swift */; };
 		087438F228523DC400AA432E /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438F128523DC400AA432E /* Cart.swift */; };
 		087438F328523DC400AA432E /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438F128523DC400AA432E /* Cart.swift */; };
+		087438F528523E7100AA432E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438F428523E7100AA432E /* NetworkManager.swift */; };
+		087438F628523E7100AA432E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438F428523E7100AA432E /* NetworkManager.swift */; };
+		087438FA285244D100AA432E /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 087438F9285244D100AA432E /* CombineMoya */; };
+		087438FC285244D100AA432E /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 087438FB285244D100AA432E /* Moya */; };
+		087438FF2852458800AA432E /* XenShopAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438FE2852458800AA432E /* XenShopAPI.swift */; };
+		087439002852458800AA432E /* XenShopAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438FE2852458800AA432E /* XenShopAPI.swift */; };
+		0874390228524AF900AA432E /* XenShopError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0874390128524AF900AA432E /* XenShopError.swift */; };
+		0874390328524AF900AA432E /* XenShopError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0874390128524AF900AA432E /* XenShopError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +67,11 @@
 		087438CF285239B500AA432E /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		087438E728523CA300AA432E /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
 		087438EA28523CCF00AA432E /* ProductRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRowView.swift; sourceTree = "<group>"; };
-		087438EE28523CFC00AA432E /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		087438EE28523CFC00AA432E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		087438F128523DC400AA432E /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		087438F428523E7100AA432E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		087438FE2852458800AA432E /* XenShopAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XenShopAPI.swift; sourceTree = "<group>"; };
+		0874390128524AF900AA432E /* XenShopError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XenShopError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				087438FC285244D100AA432E /* Moya in Frameworks */,
+				087438FA285244D100AA432E /* CombineMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +122,8 @@
 		087438A8285239B200AA432E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				087438FD2852456800AA432E /* Network */,
+				087438ED28523CF000AA432E /* Model */,
 				087438E528523C7D00AA432E /* Views */,
 				087438A9285239B200AA432E /* xenShopApp.swift */,
 				087438AA285239B200AA432E /* ContentView.swift */,
@@ -157,7 +172,6 @@
 		087438E528523C7D00AA432E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				087438ED28523CF000AA432E /* Model */,
 				087438E628523C8A00AA432E /* Products */,
 			);
 			path = Views;
@@ -175,10 +189,20 @@
 		087438ED28523CF000AA432E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				087438EE28523CFC00AA432E /* Products.swift */,
+				087438EE28523CFC00AA432E /* Product.swift */,
 				087438F128523DC400AA432E /* Cart.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		087438FD2852456800AA432E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				087438F428523E7100AA432E /* NetworkManager.swift */,
+				087438FE2852458800AA432E /* XenShopAPI.swift */,
+				0874390128524AF900AA432E /* XenShopError.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +221,10 @@
 			dependencies = (
 			);
 			name = "xenShop (iOS)";
+			packageProductDependencies = (
+				087438F9285244D100AA432E /* CombineMoya */,
+				087438FB285244D100AA432E /* Moya */,
+			);
 			productName = "xenShop (iOS)";
 			productReference = 087438B0285239B500AA432E /* xenShop.app */;
 			productType = "com.apple.product-type.application";
@@ -289,6 +317,10 @@
 				Base,
 			);
 			mainGroup = 087438A3285239B200AA432E;
+			packageReferences = (
+				087438F7285243B100AA432E /* XCRemoteSwiftPackageReference "Moya" */,
+				087438F8285244D100AA432E /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 087438B1285239B500AA432E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -341,8 +373,11 @@
 			files = (
 				087438D3285239B500AA432E /* ContentView.swift in Sources */,
 				087438F228523DC400AA432E /* Cart.swift in Sources */,
+				087438FF2852458800AA432E /* XenShopAPI.swift in Sources */,
+				087438F528523E7100AA432E /* NetworkManager.swift in Sources */,
 				087438D1285239B500AA432E /* xenShopApp.swift in Sources */,
-				087438EF28523CFC00AA432E /* Products.swift in Sources */,
+				087438EF28523CFC00AA432E /* Product.swift in Sources */,
+				0874390228524AF900AA432E /* XenShopError.swift in Sources */,
 				087438E828523CA300AA432E /* ProductsView.swift in Sources */,
 				087438EB28523CCF00AA432E /* ProductRowView.swift in Sources */,
 			);
@@ -354,8 +389,11 @@
 			files = (
 				087438D4285239B500AA432E /* ContentView.swift in Sources */,
 				087438F328523DC400AA432E /* Cart.swift in Sources */,
+				087439002852458800AA432E /* XenShopAPI.swift in Sources */,
+				087438F628523E7100AA432E /* NetworkManager.swift in Sources */,
 				087438D2285239B500AA432E /* xenShopApp.swift in Sources */,
-				087438F028523CFC00AA432E /* Products.swift in Sources */,
+				087438F028523CFC00AA432E /* Product.swift in Sources */,
+				0874390328524AF900AA432E /* XenShopError.swift in Sources */,
 				087438E928523CA300AA432E /* ProductsView.swift in Sources */,
 				087438EC28523CCF00AA432E /* ProductRowView.swift in Sources */,
 			);
@@ -739,6 +777,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		087438F7285243B100AA432E /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		087438F8285244D100AA432E /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		087438F9285244D100AA432E /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 087438F8285244D100AA432E /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		087438FB285244D100AA432E /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 087438F8285244D100AA432E /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 087438A4285239B200AA432E /* Project object */;
 }

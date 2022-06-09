@@ -1,5 +1,5 @@
 //
-//  Products.swift
+//  Product.swift
 //  xenShop
 //
 //  Created by Amit Kumar Swami on 9/6/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Products: Codable {
+struct Product: Codable {
     /**
      {
          "id": 1,
