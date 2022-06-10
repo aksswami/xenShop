@@ -39,6 +39,10 @@ class CartViewModel: ObservableObject {
         self.products = products
     }
     
+    func productDetails(id: Int) -> Product? {
+        return products.first { $0.id == id }
+    }
+    
     func addProductToCart(product: Product) {
         if let index = cart.products.firstIndex(where: { $0.productId == product.id }) {
             cart.products[index].quantity += 1

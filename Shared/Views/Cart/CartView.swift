@@ -40,7 +40,7 @@ struct CartView: View {
                                 ScrollView(.vertical, showsIndicators: false, content: {
                                     VStack(spacing: 10) {
                                         ForEach(cart.products, id: \.productId) { cartItem in
-                                            CartItemView(cartItem: cartItem)
+                                            CartItemView(cartViewModel: cartViewModel, cartItemId: cartItem.productId)
                                         }
                                     }
                                     .padding(.horizontal, 15)

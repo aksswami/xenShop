@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct CartItemView: View {
-    @State var cartItem: Cart.CartItem
-    @EnvironmentObject var appState: AppState
-    var product: Product? {
-        return appState.products.first { $0.id == cartItem.productId }
+    @ObservedObject var cartViewModel: CartViewModel
+    @State var cartItemId: Int
+    
+    private var cartItem: Cart.CartItem? {
+        return cartViewModel.cart.products.first { $0.productId == cartItemId }
     }
+    
+    private var product: Product? {
+        guard let cartItem = cartItem else {
+            return nil
+        }
+
+        return cartViewModel.productDetails(id: cartItem.productId)
+    }
+    
     var body: some View {
-        if let product = product {
+        if let cartItem = cartItem, let product = product {
             ZStack() {
                 HStack(alignment: .top) {
                     XenImageView(url: product.image)
@@ -83,7 +93,6 @@ struct CartItemView: View {
 
 struct CartItemView_Previews: PreviewProvider {
     static var previews: some View {
-        let cartItem = Cart.CartItem(productId: 2, quantity: 2)
-        CartItemView(cartItem: cartItem)
+        CartItemView(cartViewModel: CartViewModel(cart: Cart(id: 1, userId: 1, date: Date.now), products: []), cartItemId: 1)
     }
 }
