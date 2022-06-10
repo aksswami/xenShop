@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProductDetailView: View {
     @State var product: Product
+    @State private var showOverlay = false
     @EnvironmentObject var appState: AppState
     
     var body: some View {
@@ -64,6 +65,7 @@ struct ProductDetailView: View {
                 }
                 AddToCartButton()
             }
+            .overlay(overlayView: Banner(data: Banner.BannerDataModel(title: "Success", detail: "\(product.title) added to cart.", type: .success), show: $showOverlay), show: $showOverlay)
             .navigationBarTitle(product.title, displayMode: .inline)
         }
     }
@@ -71,6 +73,7 @@ struct ProductDetailView: View {
     fileprivate func AddToCartButton() -> some View {
         Button(action: {
             appState.cartViewModel.addProductToCart(product: product)
+            showOverlay = true
         }) {
             Text("")
                 .frame(height: 65)
