@@ -27,6 +27,8 @@
 		08552DAA2852EE8F00B3CD1C /* CartItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08552DA82852EE8F00B3CD1C /* CartItemView.swift */; };
 		08552DAC2852F42D00B3CD1C /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08552DAB2852F42D00B3CD1C /* LineView.swift */; };
 		08552DAD2852F42D00B3CD1C /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08552DAB2852F42D00B3CD1C /* LineView.swift */; };
+		08552DB0285306C700B3CD1C /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08552DAF285306C700B3CD1C /* CartViewModel.swift */; };
+		08552DB1285306C700B3CD1C /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08552DAF285306C700B3CD1C /* CartViewModel.swift */; };
 		087438C2285239B500AA432E /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438C1285239B500AA432E /* Tests_iOS.swift */; };
 		087438C4285239B500AA432E /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438C3285239B500AA432E /* Tests_iOSLaunchTests.swift */; };
 		087438CE285239B500AA432E /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438CD285239B500AA432E /* Tests_macOS.swift */; };
@@ -81,6 +83,7 @@
 		08552DA52852EE1300B3CD1C /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		08552DA82852EE8F00B3CD1C /* CartItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemView.swift; sourceTree = "<group>"; };
 		08552DAB2852F42D00B3CD1C /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
+		08552DAF285306C700B3CD1C /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		087438A9285239B200AA432E /* xenShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xenShopApp.swift; sourceTree = "<group>"; };
 		087438AB285239B500AA432E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		087438B0285239B500AA432E /* xenShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xenShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +152,7 @@
 			children = (
 				08552DA52852EE1300B3CD1C /* CartView.swift */,
 				08552DA82852EE8F00B3CD1C /* CartItemView.swift */,
+				08552DAF285306C700B3CD1C /* CartViewModel.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -433,6 +437,7 @@
 				08552D902852555100B3CD1C /* XenColor.swift in Sources */,
 				08552D9F2852DE5000B3CD1C /* SplashView.swift in Sources */,
 				08552DA62852EE1300B3CD1C /* CartView.swift in Sources */,
+				08552DB0285306C700B3CD1C /* CartViewModel.swift in Sources */,
 				087438F228523DC400AA432E /* Cart.swift in Sources */,
 				0874390528524E3100AA432E /* Product.swift in Sources */,
 				08552D9C2852670D00B3CD1C /* ProductDetailView.swift in Sources */,
@@ -458,6 +463,7 @@
 				08552D912852555100B3CD1C /* XenColor.swift in Sources */,
 				08552DA02852DE5000B3CD1C /* SplashView.swift in Sources */,
 				08552DA72852EE1300B3CD1C /* CartView.swift in Sources */,
+				08552DB1285306C700B3CD1C /* CartViewModel.swift in Sources */,
 				087438F328523DC400AA432E /* Cart.swift in Sources */,
 				0874390628524E3100AA432E /* Product.swift in Sources */,
 				08552D9D2852670D00B3CD1C /* ProductDetailView.swift in Sources */,

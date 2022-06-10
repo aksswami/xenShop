@@ -20,7 +20,7 @@ struct TabbarView: View {
                         Image(systemName: "house.fill")
                         Text("Products")
                     }.tag(0)
-                CartView(cart: appState.cart)
+                CartView(cartViewModel: appState.cartViewModel)
                     .tabItem {
                         Image(systemName: "cart.fill")
                         Text("Cart")

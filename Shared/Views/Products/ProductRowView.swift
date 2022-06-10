@@ -9,11 +9,12 @@ import SwiftUI
 
 struct ProductRowView: View {
     var product: Product
+    @EnvironmentObject var appState: AppState
     @State var show = false
     
     var body: some View {
         ZStack {
-            NavigationLink(destination: ProductDetailView(product: product), isActive: self.$show) {
+            NavigationLink(destination: ProductDetailView(product: product).environmentObject(appState), isActive: self.$show) {
                 Text("")
             }
             VStack(alignment: .leading) {

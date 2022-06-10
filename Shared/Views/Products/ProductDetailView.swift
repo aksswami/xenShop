@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ProductDetailView: View {
     @State var product: Product
+    @EnvironmentObject var appState: AppState
+    
     var body: some View {
         GeometryReader { geomerty in
             VStack {
@@ -71,7 +73,6 @@ struct ProductDetailView: View {
                         
                     }
                 }
-                
                 AddToCartButton()
             }
             .navigationBarTitle(product.title, displayMode: .inline)
@@ -80,7 +81,7 @@ struct ProductDetailView: View {
     
     fileprivate func AddToCartButton() -> some View {
         Button(action: {
-            
+            appState.cartViewModel.addProductToCart(product: product)
         }) {
             Text("")
                 .frame(height: 65)

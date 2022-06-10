@@ -12,7 +12,7 @@ let userId = 1
 class AppState: ObservableObject {
     @Published var products = [Product]()
     @Published var categories = [String]()
-    @Published var cart: Cart = Cart(id: Int.random(in: 1...Int.max), userId: userId, date: Date.now, products: [Cart.CartItem(productId: 2, quantity: 2)])
+    @Published var cartViewModel = CartViewModel()
     
     let network = NetworkManager()
     private var cancellables = Set<AnyCancellable>()
@@ -41,8 +41,10 @@ class AppState: ObservableObject {
             .sink { completion in
                 print(completion)
             } receiveValue: { cart in
-                self.cart = cart
+                self.cartViewModel.cart = cart
+                self.cartViewModel.objectWillChange.send()
             }
             .store(in: &cancellables)
     }
+
 }

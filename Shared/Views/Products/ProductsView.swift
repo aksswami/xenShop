@@ -30,6 +30,7 @@ struct ProductsView: View {
                         ForEach(filtertedProducts, id: \.id) { product in
                             ProductRowView(product: product)
                                 .frame(width: geometry.size.width/2.0, height: 255, alignment: .center)
+                                .environmentObject(appState)
                         }
                     }
                 }

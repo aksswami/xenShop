@@ -8,6 +8,7 @@
 import Foundation
 
 struct Cart: Codable {
+
     /**
      {
          "id": 1,
@@ -36,4 +37,11 @@ struct Cart: Codable {
         var productId: Int
         var quantity: Int
     }
+    
+//    internal init(id: Int, userId: Int, date: Date, products: [Cart.CartItem] = [CartItem]()) {
+//        self.id = id
+//        self.userId = userId
+//        self.date = date
+//        self.products = products
+//    }
 }
