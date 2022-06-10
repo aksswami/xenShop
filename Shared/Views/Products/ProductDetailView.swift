@@ -36,14 +36,14 @@ struct ProductDetailView: View {
                                 VStack(alignment: .leading) {
                                     Text(product.title)
                                         .font(.system(size: 18, weight: .heavy, design: .default))
-                                        .foregroundColor(XenColor.secondaryText)
+                                        .foregroundColor(XenColor.primaryText)
                                         .lineLimit(nil)
                                         .padding([.horizontal], 15)
                                         .padding(.bottom, 5)
                                     Spacer()
                                     Text(product.presentablePrice)
                                         .font(.system(size: 14, weight: .semibold, design: .default))
-                                        .foregroundColor(.gray)
+                                        .foregroundColor(XenColor.primaryText)
                                         .padding([.horizontal], 15)
                                     Spacer()
                                     Rectangle()
@@ -52,11 +52,11 @@ struct ProductDetailView: View {
                                     
                                     Text("Product Details")
                                         .font(.system(size: 16, weight: .semibold, design: .default))
-                                        .foregroundColor(XenColor.secondaryText)
+                                        .foregroundColor(XenColor.primaryText)
                                         .padding(.top, 10)
                                         .padding(.horizontal, 15)
                                     Text(product.description ?? "")
-                                        .font(.system(size: 14, weight: .light, design: .default))
+                                        .font(.system(size: 14, weight: .medium, design: .default))
                                         .foregroundColor(XenColor.secondaryText)
                                         .padding(.vertical, 5)
                                         .lineSpacing(2)
@@ -90,10 +90,13 @@ struct ProductDetailView: View {
         }
         .padding(.horizontal, 0)
         .overlay(
+            HStack {
             Text("Add To Cart")
-                .font(.system(size: 18.0, weight: .heavy, design: .default))
-                .foregroundColor(.white)
-                .padding(.top, -10)
+                .font(.system(size: 18.0, weight: .semibold, design: .default))
+                .foregroundColor(XenColor.primaryText)
+                Image(systemName: "cart.fill")
+                    .foregroundColor(XenColor.primaryText)
+            }
         )
     }
 }

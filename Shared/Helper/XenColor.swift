@@ -13,7 +13,8 @@ struct XenColor {
     static let primary = Color.primary
     static let secondary = Color.secondary
     static let primaryText = Color.black.opacity(0.8)
-    static let secondaryText = Color.gray.opacity(0.6)
+    static let secondaryText = Color(hex: "#9E9E9E")
+    static let tertiaryText = Color(hex: "#BDBDBD")
     static let primaryBackground = Color.init(hex: "#FFC107")
     static let secondaryBackground = Color.init(hex: "#BDBDBD")
 }

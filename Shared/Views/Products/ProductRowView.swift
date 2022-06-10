@@ -34,12 +34,12 @@ struct ProductRowView: View {
                     .padding([.horizontal], 10)
                 Text(product.category)
                     .font(.caption)
-                    .foregroundColor(XenColor.secondaryText)
+                    .foregroundColor(XenColor.tertiaryText)
                     .padding([.horizontal], 10)
                 HStack {
                     Text(product.presentablePrice)
                         .font(.system(size: 14, weight: .bold, design: .default))
-                        .foregroundColor(XenColor.secondaryText)
+                        .foregroundColor(XenColor.primaryText)
                 }
                 .padding([.leading, .trailing], 10)
                 Spacer()

@@ -27,7 +27,7 @@ struct TabbarView: View {
                     }.tag(1)
             }
         }
-        .accentColor(Color.init(hex: "DB3022"))
+        .accentColor(XenColor.primaryBackground)
         .navigationBarTitle("", displayMode: .inline)
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
