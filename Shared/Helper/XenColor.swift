@@ -9,29 +9,40 @@ import Foundation
 import SwiftUI
 
 struct XenColor {
-    static let primaryBlack = Color.init(hex: "1F1F1F")
-    static let secondaryBlack = Color.init(hex: "464B5F")
-    static let lightGrayColor = Color.init(hex: "F9F9F9")
-    static let primaryRed = Color.init(hex: "CB2D3E")
-    static let secondaryRed = Color.init(hex: "EF473A")
-    static let gradientRedHorizontal = LinearGradient(gradient: Gradient(colors: [Color.init(hex: "CB2D3E"), Color.init(hex: "EF473A")]), startPoint: .leading, endPoint: .trailing)
-    static let gradientRedVertical = LinearGradient(gradient: Gradient(colors: [Color.init(hex: "CB2D3E"), Color.init(hex: "EF473A")]), startPoint: .bottom, endPoint: .top)
-    static let shadowColor = Color.init(hex: "dddddd")
-    static let lightGreen = Color.init(hex: "e8fbe8")
+    static let title = Color.black
+    static let primary = Color.primary
+    static let secondary = Color.secondary
+    static let primaryText = Color.black.opacity(0.8)
+    static let secondaryText = Color.gray.opacity(0.6)
+    static let primaryBackground = Color.init(hex: "#FFC107")
+    static let secondaryBackground = Color.init(hex: "#BDBDBD")
 }
 
 
 extension Color {
     init(hex: String) {
-        let scanner = Scanner(string: hex)
-        var rgbValue: UInt64 = 0
-        scanner.scanHexInt64(&rgbValue)
-        
-        let r = (rgbValue & 0xff0000) >> 16
-        let g = (rgbValue & 0xff00) >> 8
-        let b = rgbValue & 0xff
-        
-        self.init(red: Double(r) / 0xff, green: Double(g) / 0xff, blue: Double(b) / 0xff)
+        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int: UInt64 = 0
+        Scanner(string: hex).scanHexInt64(&int)
+        let a, r, g, b: UInt64
+        switch hex.count {
+        case 3: // RGB (12-bit)
+            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+        case 6: // RGB (24-bit)
+            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+        case 8: // ARGB (32-bit)
+            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        default:
+            (a, r, g, b) = (1, 1, 1, 0)
+        }
+
+        self.init(
+            .sRGB,
+            red: Double(r) / 255,
+            green: Double(g) / 255,
+            blue:  Double(b) / 255,
+            opacity: Double(a) / 255
+        )
     }
 }
 

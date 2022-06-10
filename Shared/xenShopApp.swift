@@ -10,11 +10,10 @@ import Combine
 
 @main
 struct xenShopApp: App {
-    @StateObject private var fetcher = ProductsFetcher()
+    
     var body: some Scene {
         WindowGroup {
-            TabbarView()
-                .environmentObject(fetcher)
+            SplashView()
         }
     }
 }

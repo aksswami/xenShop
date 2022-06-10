@@ -17,6 +17,10 @@
 		08552D9A285263B000B3CD1C /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08552D98285263B000B3CD1C /* ActivityIndicatorView.swift */; };
 		08552D9C2852670D00B3CD1C /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08552D9B2852670D00B3CD1C /* ProductDetailView.swift */; };
 		08552D9D2852670D00B3CD1C /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08552D9B2852670D00B3CD1C /* ProductDetailView.swift */; };
+		08552D9F2852DE5000B3CD1C /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08552D9E2852DE5000B3CD1C /* SplashView.swift */; };
+		08552DA02852DE5000B3CD1C /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08552D9E2852DE5000B3CD1C /* SplashView.swift */; };
+		08552DA22852E29900B3CD1C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08552DA12852E29900B3CD1C /* Constants.swift */; };
+		08552DA32852E29900B3CD1C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08552DA12852E29900B3CD1C /* Constants.swift */; };
 		087438C2285239B500AA432E /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438C1285239B500AA432E /* Tests_iOS.swift */; };
 		087438C4285239B500AA432E /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438C3285239B500AA432E /* Tests_iOSLaunchTests.swift */; };
 		087438CE285239B500AA432E /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087438CD285239B500AA432E /* Tests_macOS.swift */; };
@@ -68,6 +72,8 @@
 		08552D9528525C2C00B3CD1C /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		08552D98285263B000B3CD1C /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		08552D9B2852670D00B3CD1C /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		08552D9E2852DE5000B3CD1C /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		08552DA12852E29900B3CD1C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		087438A9285239B200AA432E /* xenShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xenShopApp.swift; sourceTree = "<group>"; };
 		087438AA285239B200AA432E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		087438AB285239B500AA432E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				08552D8F2852555100B3CD1C /* XenColor.swift */,
+				08552DA12852E29900B3CD1C /* Constants.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -199,6 +206,7 @@
 				087438E628523C8A00AA432E /* Products */,
 				08552D9528525C2C00B3CD1C /* TabbarView.swift */,
 				08552D98285263B000B3CD1C /* ActivityIndicatorView.swift */,
+				08552D9E2852DE5000B3CD1C /* SplashView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -400,10 +408,12 @@
 			files = (
 				087438D3285239B500AA432E /* ContentView.swift in Sources */,
 				08552D902852555100B3CD1C /* XenColor.swift in Sources */,
+				08552D9F2852DE5000B3CD1C /* SplashView.swift in Sources */,
 				087438F228523DC400AA432E /* Cart.swift in Sources */,
 				0874390528524E3100AA432E /* Product.swift in Sources */,
 				08552D9C2852670D00B3CD1C /* ProductDetailView.swift in Sources */,
 				087438FF2852458800AA432E /* XenShopAPI.swift in Sources */,
+				08552DA22852E29900B3CD1C /* Constants.swift in Sources */,
 				087438F528523E7100AA432E /* NetworkManager.swift in Sources */,
 				08552D9628525C2C00B3CD1C /* TabbarView.swift in Sources */,
 				087438D1285239B500AA432E /* xenShopApp.swift in Sources */,
@@ -421,10 +431,12 @@
 			files = (
 				087438D4285239B500AA432E /* ContentView.swift in Sources */,
 				08552D912852555100B3CD1C /* XenColor.swift in Sources */,
+				08552DA02852DE5000B3CD1C /* SplashView.swift in Sources */,
 				087438F328523DC400AA432E /* Cart.swift in Sources */,
 				0874390628524E3100AA432E /* Product.swift in Sources */,
 				08552D9D2852670D00B3CD1C /* ProductDetailView.swift in Sources */,
 				087439002852458800AA432E /* XenShopAPI.swift in Sources */,
+				08552DA32852E29900B3CD1C /* Constants.swift in Sources */,
 				087438F628523E7100AA432E /* NetworkManager.swift in Sources */,
 				08552D9728525C2C00B3CD1C /* TabbarView.swift in Sources */,
 				087438D2285239B500AA432E /* xenShopApp.swift in Sources */,

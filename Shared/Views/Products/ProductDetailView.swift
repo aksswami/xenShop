@@ -14,7 +14,7 @@ struct ProductDetailView: View {
             VStack {
                 ScrollView {
                     ZStack {
-                        XenColor.lightGrayColor
+                        XenColor.secondaryBackground
                             .edgesIgnoringSafeArea(.all)
                         VStack {
                             VStack(alignment: .center) {
@@ -36,7 +36,7 @@ struct ProductDetailView: View {
                                 VStack(alignment: .leading) {
                                     Text(product.title)
                                         .font(.system(size: 18, weight: .heavy, design: .default))
-                                        .foregroundColor(XenColor.secondaryBlack)
+                                        .foregroundColor(XenColor.secondaryText)
                                         .lineLimit(nil)
                                         .padding([.horizontal], 15)
                                         .padding(.bottom, 5)
@@ -52,12 +52,12 @@ struct ProductDetailView: View {
                                     
                                     Text("Product Details")
                                         .font(.system(size: 16, weight: .semibold, design: .default))
-                                        .foregroundColor(XenColor.secondaryBlack)
+                                        .foregroundColor(XenColor.secondaryText)
                                         .padding(.top, 10)
                                         .padding(.horizontal, 15)
                                     Text(product.description ?? "")
                                         .font(.system(size: 14, weight: .light, design: .default))
-                                        .foregroundColor(XenColor.secondaryBlack)
+                                        .foregroundColor(XenColor.secondaryText)
                                         .padding(.vertical, 5)
                                         .lineSpacing(2)
                                         .padding(.horizontal, 15)
@@ -85,7 +85,7 @@ struct ProductDetailView: View {
             Text("")
                 .frame(height: 65)
                 .frame(minWidth: 0, maxWidth: .infinity)
-                .background(XenColor.gradientRedHorizontal)
+                .background(XenColor.primaryBackground)
                 .cornerRadius(0)
         }
         .padding(.horizontal, 0)

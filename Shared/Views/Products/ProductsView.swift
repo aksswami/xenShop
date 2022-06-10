@@ -34,12 +34,9 @@ struct ProductsView: View {
                     }
                 }
             }
-            .navigationBarTitle("xenShop")
+            .navigationBarTitle(Constant.XenString.appTitle)
+            .foregroundColor(XenColor.title)
             .navigationBarItems(trailing: CategoryFilterView())
-            .task {
-                fetcher.fetchProducts()
-                fetcher.fetchCategories()
-            }
         }
     }
     
