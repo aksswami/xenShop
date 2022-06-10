@@ -60,3 +60,6 @@ To run the application locally, please used Xcode 13.4+ and make sure all comman
 
 There seems to be an issue with running the XCTest for iOS target of this project. Most probably due to M1 mac. Not much time to dig deep and resolve issue.
 
+## Demo
+
+![xenShop](https://github.com/aksswami/xenShop/blob/master/Demo.gif)
