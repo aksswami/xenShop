@@ -44,6 +44,10 @@ Below is the major application components.
    1. XenColor: Color pallet for app
    2. Constant.XenString: String constant for app
 
+## Design
+
+Design (UI/UX) inspiration is coming from free template available on Figma.
+
 ## Running the application
 
 To run the application locally, please used Xcode 13.4+ and make sure all command line tools are installed.
@@ -55,3 +59,4 @@ To run the application locally, please used Xcode 13.4+ and make sure all comman
 ## NOTE
 
 There seems to be an issue with running the XCTest for iOS target of this project. Most probably due to M1 mac. Not much time to dig deep and resolve issue.
+
