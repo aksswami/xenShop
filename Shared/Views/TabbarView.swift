@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TabbarView: View {
     @State var selected = 0
-    @EnvironmentObject var fetcher: ProductsFetcher
+    @EnvironmentObject var appState: AppState
     var body: some View {
         ZStack {
             Color.init(hex: "f9f9f9")
@@ -20,7 +20,7 @@ struct TabbarView: View {
                         Image(systemName: "house.fill")
                         Text("Products")
                     }.tag(0)
-                ProductsView()
+                CartView(cart: appState.cart)
                     .tabItem {
                         Image(systemName: "cart.fill")
                         Text("Cart")

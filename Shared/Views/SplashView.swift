@@ -11,13 +11,13 @@ struct SplashView: View {
     
     @State var isActive:Bool = false
     @State var title: String = ""
-    @StateObject private var fetcher = ProductsFetcher()
+    @StateObject private var appState = AppState()
     
     var body: some View {
         VStack {
             if self.isActive {
                 TabbarView()
-                    .environmentObject(fetcher)
+                    .environmentObject(appState)
             } else {
                 Text(title)
                     .font(Font.system(size: 48, weight: .semibold, design: .monospaced))
@@ -42,8 +42,9 @@ struct SplashView: View {
         }
         
         .task {
-            fetcher.fetchProducts()
-            fetcher.fetchCategories()
+            appState.fetchProducts()
+            appState.fetchCategories()
+            appState.fetchCart()
         }
     }
     

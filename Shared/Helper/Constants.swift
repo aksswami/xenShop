@@ -10,5 +10,6 @@ import Foundation
 struct Constant {
     struct XenString {
         static let appTitle = "xenShop"
+        static let cart = "Cart"
     }
 }

@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct ProductsView: View {
-    @EnvironmentObject var fetcher: ProductsFetcher
+    @EnvironmentObject var appState: AppState
     @State private var showingFilter = false
     @State private var selectedCategory: String?
     
     private var filtertedProducts: [Product] {
         guard let selectedCategory = selectedCategory else {
-            return fetcher.products
+            return appState.products
         }
-        return fetcher.products.filter { $0.category == selectedCategory }
+        return appState.products.filter { $0.category == selectedCategory }
     }
     
     var body: some View {
@@ -34,8 +34,9 @@ struct ProductsView: View {
                     }
                 }
             }
-            .navigationBarTitle(Constant.XenString.appTitle)
+            .navigationTitle(Constant.XenString.appTitle)
             .foregroundColor(XenColor.title)
+            .navigationBarTitleDisplayMode(.large)
             .navigationBarItems(trailing: CategoryFilterView())
         }
     }
@@ -48,7 +49,7 @@ struct ProductsView: View {
         .confirmationDialog("Select a category",
                             isPresented: $showingFilter,
                             titleVisibility: .visible) {
-            ForEach(fetcher.categories, id: \.self) { category in
+            ForEach(appState.categories, id: \.self) { category in
                 Button(category.capitalized) {
                     selectedCategory = category
                 }
