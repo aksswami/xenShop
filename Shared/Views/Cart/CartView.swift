@@ -11,6 +11,7 @@ import Combine
 struct CartView: View {
     @ObservedObject var cartViewModel: CartViewModel
     @State var showOverlay = false
+    @State var orderPlaced = false
     
     var cart: Cart {
         return cartViewModel.cart
@@ -18,6 +19,10 @@ struct CartView: View {
     
     var body: some View {
         NavigationView {
+            ZStack {
+            NavigationLink(destination: OrderView(cartViewModel: cartViewModel), isActive: self.$orderPlaced) {
+                Text("")
+            }
             if cart.products.count == 0 {
                 VStack {
                     Image(systemName: "bag")
@@ -94,11 +99,12 @@ struct CartView: View {
 //                }
             }
         }
+        }
     }
     
     fileprivate func CheckoutButton() -> some View {
         Button(action: {
-            
+            orderPlaced = true
         }) {
             Text("")
                 .frame(height: 50)

@@ -11,5 +11,6 @@ struct Constant {
     struct XenString {
         static let appTitle = "xenShop"
         static let cart = "Cart"
+        static let order = "Order Placed"
     }
 }
