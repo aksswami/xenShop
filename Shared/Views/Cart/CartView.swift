@@ -21,6 +21,7 @@ struct CartView: View {
                 VStack {
                     Image(systemName: "bag")
                         .resizable()
+                        .aspectRatio(contentMode: .fit)
                         .foregroundColor(XenColor.primaryBackground)
                         .frame(width: 100, height: 100, alignment: .center)
                     Text("No products in Cart.\nShop now and add products to cart")
@@ -96,8 +97,6 @@ struct CartView: View {
 
 struct CartView_Previews: PreviewProvider {
     static var previews: some View {
-        let Cart = Cart(id: 1, userId: 1, date: Date.now, products: [])
-        //        CartView(cart: Cart)
         CartView(cartViewModel: CartViewModel())
     }
 }
