@@ -17,15 +17,8 @@ struct CartItemView: View {
         if let product = product {
             ZStack() {
                 HStack(alignment: .top) {
-                    AsyncImage(url: product.image) { image in
-                        image.resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .padding(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
-                            .cornerRadius(0)
-                    } placeholder: {
-                        ActivityIndicatorView()
-                            .frame(width: 40, height: 40, alignment: .topLeading)
-                    }.frame(width: 120, height: 120, alignment: .leading)
+                    XenImageView(url: product.image)
+                        .frame(width: 120, height: 120, alignment: .leading)
                     
                     VStack(alignment: .leading) {
                         HStack(alignment: .top) {

@@ -20,24 +20,7 @@ struct ProductDetailView: View {
                             .edgesIgnoringSafeArea(.all)
                         VStack {
                             VStack(alignment: .center) {
-                                AsyncImage(url: product.image) { phase in
-                                    if let image = phase.image {
-                                    image.resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .padding([.all], 0)
-                                        .cornerRadius(0)
-                                        .frame(width: nil, height: nil, alignment: .center)
-                                    } else if let _ = phase.error {
-                                        Image(systemName: "photo")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .padding([.all], 20)
-                                            .foregroundColor(XenColor.primaryBackground.opacity(0.5))
-                                    } else {
-                                        ActivityIndicatorView()
-                                            .frame(width: 40, height: 40, alignment: .topLeading)
-                                    }
-                                }
+                                XenImageView(url: product.image)
                                 .frame(width: nil, height: geomerty.size.height * 0.6, alignment: .center)
                                 .padding([.all], 0)
                                 
