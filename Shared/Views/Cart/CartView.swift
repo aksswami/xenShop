@@ -47,43 +47,46 @@ struct CartView: View {
                                 })
                                 .disabled(false)
                                 .frame(height: (CGFloat(cart.products.count) * 120) + 30)
-                                LineView()
-                                VStack {
-                                    HStack {
-                                        Text("Item Total")
-                                            .font(.system(size: 14, weight: .regular, design: .default))
-                                            .foregroundColor(XenColor.primaryText)
-                                        Spacer()
-                                        Text("S$1222")
-                                            .font(.system(size: 14, weight: .bold, design: .default))
-                                            .foregroundColor(XenColor.primaryText)
-                                    }
-                                    .padding(.top, 10)
-                                    .padding(.horizontal, 15)
-                                    
-                                    LineView()
-                                        .padding(.vertical, 5)
-                                    
-                                    HStack {
-                                        Text("Total Amount")
-                                            .font(.system(size: 16, weight: .bold, design: .default))
-                                            .foregroundColor(XenColor.primaryText)
-                                        Spacer()
-                                        Text("S$2323")
-                                            .font(.system(size: 16, weight: .bold, design: .default))
-                                            .foregroundColor(XenColor.primaryText)
-                                    }
-                                    .padding(.horizontal, 15)
-                                    .padding(.bottom, 5)
-                                    
-                                    Spacer()
-                                }
-                                .padding(.top, 2)
                             }
                         }
                     }
+                    .frame(maxHeight: .infinity)
                     .padding(.top, 5)
-                    Spacer()
+//                    Spacer()
+                    LineView()
+                    VStack {
+                        HStack {
+                            Text("Item Total")
+                                .font(.system(size: 14, weight: .regular, design: .default))
+                                .foregroundColor(XenColor.primaryText)
+                            Spacer()
+                            Text("S$1222")
+                                .font(.system(size: 14, weight: .bold, design: .default))
+                                .foregroundColor(XenColor.primaryText)
+                        }
+                        .padding(.top, 10)
+                        .padding(.horizontal, 15)
+                        
+                        LineView()
+                            .padding(.vertical, 5)
+                        
+                        HStack {
+                            Text("Total Amount")
+                                .font(.system(size: 16, weight: .bold, design: .default))
+                                .foregroundColor(XenColor.primaryText)
+                            Spacer()
+                            Text("S$2323")
+                                .font(.system(size: 16, weight: .bold, design: .default))
+                                .foregroundColor(XenColor.primaryText)
+                        }
+                        .padding(.horizontal, 15)
+                        .padding(.bottom, 10)
+                        LineView()
+                            .padding(.vertical, 5)
+                            .foregroundColor(.gray.opacity(0.5))
+                    }
+                    .padding(.top, 2)
+                    
                     //CheckoutView
                 }
                 .navigationTitle(Constant.XenString.cart)
