@@ -76,7 +76,7 @@ struct ProductDetailView: View {
             showOverlay = true
         }) {
             Text("")
-                .frame(height: 65)
+                .frame(height: 50)
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .background(XenColor.primaryBackground)
                 .cornerRadius(0)

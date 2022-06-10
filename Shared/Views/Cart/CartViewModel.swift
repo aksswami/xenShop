@@ -11,6 +11,7 @@ import Combine
 class CartViewModel: ObservableObject {
     @Published var cart: Cart
     @Published var products = [Product]()
+    @Published var itemRemoved = false
     
     var orderTotal: Double {
         return cart.products
@@ -49,6 +50,16 @@ class CartViewModel: ObservableObject {
         } else {
             cart.products.append(Cart.CartItem(productId: product.id, quantity: 1))
         }
+        self.cart = cart
+        print(cart)
+        objectWillChange.send()
+    }
+    
+    func removeProductFromCart(productId: Int) {
+        if let index = cart.products.firstIndex(where: { $0.productId == productId }) {
+            cart.products.remove(at: index)
+        }
+        self.itemRemoved = true
         self.cart = cart
         print(cart)
         objectWillChange.send()

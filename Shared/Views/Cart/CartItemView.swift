@@ -38,7 +38,7 @@ struct CartItemView: View {
                                 .lineLimit(1)
                             Spacer()
                             Button(action: {
-                                
+                                cartViewModel.removeProductFromCart(productId: product.id)
                             }) {
                                 Image(systemName: "xmark.square")
                                     .foregroundColor(Color.red.opacity(0.6))

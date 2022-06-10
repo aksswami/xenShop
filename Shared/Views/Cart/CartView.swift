@@ -10,6 +10,7 @@ import Combine
 
 struct CartView: View {
     @ObservedObject var cartViewModel: CartViewModel
+    @State var showOverlay = false
     
     var cart: Cart {
         return cartViewModel.cart
@@ -63,12 +64,10 @@ struct CartView: View {
                                 .font(.system(size: 14, weight: .bold, design: .default))
                                 .foregroundColor(XenColor.primaryText)
                         }
-                        .padding(.top, 10)
                         .padding(.horizontal, 15)
                         
                         LineView()
-                            .padding(.vertical, 5)
-                        
+
                         HStack {
                             Text("Total Amount")
                                 .font(.system(size: 16, weight: .bold, design: .default))
@@ -79,21 +78,45 @@ struct CartView: View {
                                 .foregroundColor(XenColor.primaryText)
                         }
                         .padding(.horizontal, 15)
-                        .padding(.bottom, 10)
-                        LineView()
-                            .padding(.vertical, 5)
-                            .foregroundColor(.gray.opacity(0.5))
                     }
                     .padding(.top, 2)
                     
-                    //CheckoutView
+                    CheckoutButton()
                 }
+                .overlay(overlayView: Banner(data: Banner.BannerDataModel(title: "Cart Updated", detail: "Item removed from cart.", type: .info), show: $showOverlay), show: $showOverlay)
                 .navigationTitle(Constant.XenString.cart)
                 .foregroundColor(XenColor.primaryText)
                 .navigationBarTitleDisplayMode(.large)
+                // Check issue why this varibale change on add.
+//                .onReceive(cartViewModel.$itemRemoved) { out in
+//                    print("Overlay change \(out)")
+//                    self.showOverlay = true
+//                }
             }
         }
-        
+    }
+    
+    fileprivate func CheckoutButton() -> some View {
+        Button(action: {
+            
+        }) {
+            Text("")
+                .frame(height: 50)
+                .frame(minWidth: 0, maxWidth: .infinity)
+                .background(XenColor.primaryBackground)
+                .cornerRadius(0)
+        }
+        .padding(.horizontal, 0)
+        .padding(.vertical, 0)
+        .overlay(
+            HStack {
+            Text("Checkout")
+                .font(.system(size: 18.0, weight: .semibold, design: .default))
+                .foregroundColor(XenColor.primaryText)
+                Image(systemName: "creditcard.fill")
+                    .foregroundColor(XenColor.primaryText)
+            }
+        )
     }
 }
 
