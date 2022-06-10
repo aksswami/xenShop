@@ -10,7 +10,6 @@ import Combine
 
 let userId = 1
 class AppState: ObservableObject {
-
     
     @Published var products = [Product]()
     @Published var categories = [String]()
