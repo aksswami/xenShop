@@ -36,10 +36,22 @@ Below is the major application components.
    1. XenShopAPI: Enum listing all possible APIs
    Cart API not working as of now, so didn't integrate those.
    2. XenShopError: Error parsing from API
+   3. Fake APIs used from https://fakestoreapi.com
 4. Model:
    1. Product: Product Details like (title, description, price, etc.)
    2. Cart: Cart details like (cardId, userId, products in cart with quantity)
 5. Constant:
    1. XenColor: Color pallet for app
    2. Constant.XenString: String constant for app
-   3. 
+
+## Running the application
+
+To run the application locally, please used Xcode 13.4+ and make sure all command line tools are installed.
+
+1. Open xenShop.xcodeproj file using Xcode
+2. Resolve SPM dependencies: Xcode -> File -> Packages -> Resolve package dependencies
+3. Run application target `xenShop` to iOS Simulator.
+
+## NOTE
+
+There seems to be an issue with running the XCTest for iOS target of this project. Most probably due to M1 mac. Not much time to dig deep and resolve issue.
