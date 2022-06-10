@@ -26,7 +26,7 @@ struct ProductsView: View {
                     LazyVGrid(columns: [
                         GridItem(.fixed((geometry.size.width - 0) / 2.0), spacing: 0, alignment: .leading),
                         GridItem(.fixed((geometry.size.width - 0) / 2.0), spacing: 0, alignment: .leading)
-                    ], alignment: .leading, spacing: 0) {
+                    ], alignment: .leading, spacing: 20) {
                         ForEach(filtertedProducts, id: \.id) { product in
                             ProductRowView(product: product)
                                 .frame(width: geometry.size.width/2.0, height: 255, alignment: .center)

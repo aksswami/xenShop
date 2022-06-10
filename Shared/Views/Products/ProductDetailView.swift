@@ -22,8 +22,8 @@ struct ProductDetailView: View {
                         VStack {
                             VStack(alignment: .center) {
                                 XenImageView(url: product.image)
-                                .frame(width: nil, height: geomerty.size.height * 0.6, alignment: .center)
-                                .padding([.all], 0)
+                                    .frame(width: nil, height: geomerty.size.height * 0.6, alignment: .center)
+                                    .padding([.all], 0)
                                 
                                 VStack(alignment: .leading) {
                                     Text(product.title)
@@ -33,10 +33,16 @@ struct ProductDetailView: View {
                                         .padding([.horizontal], 15)
                                         .padding(.bottom, 5)
                                     Spacer()
-                                    Text(product.presentablePrice)
-                                        .font(.system(size: 14, weight: .semibold, design: .default))
-                                        .foregroundColor(XenColor.primaryText)
-                                        .padding([.horizontal], 15)
+                                    HStack {
+                                        Text(product.presentablePrice)
+                                            .font(.system(size: 14, weight: .semibold, design: .default))
+                                            .foregroundColor(XenColor.primaryText)
+                                            .padding([.horizontal], 15)
+                                        Spacer()
+                                        StarsView(rating: product.rating.rate)
+                                            .frame(maxWidth: 100, maxHeight: 20)
+                                            .padding(.trailing, 10)
+                                    }
                                     Spacer()
                                     Rectangle()
                                         .frame(width: nil, height: 0.5, alignment: .leading)
@@ -84,9 +90,9 @@ struct ProductDetailView: View {
         .padding(.horizontal, 0)
         .overlay(
             HStack {
-            Text("Add To Cart")
-                .font(.system(size: 18.0, weight: .semibold, design: .default))
-                .foregroundColor(XenColor.primaryText)
+                Text("Add To Cart")
+                    .font(.system(size: 18.0, weight: .semibold, design: .default))
+                    .foregroundColor(XenColor.primaryText)
                 Image(systemName: "cart.fill")
                     .foregroundColor(XenColor.primaryText)
             }
