@@ -49,7 +49,7 @@ struct CartItemView: View {
                                         .foregroundColor(.gray)
                                         .frame(width: 25, height: 25)
                                 }
-                                Text("1")
+                                Text("\(cartItem.quantity)")
                                     .font(.system(size: 13, weight: .bold, design: .default))
                                     .foregroundColor(XenColor.primary)
                                     .padding(.horizontal, 5)

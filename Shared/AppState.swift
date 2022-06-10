@@ -10,12 +10,23 @@ import Combine
 
 let userId = 1
 class AppState: ObservableObject {
+
+    
     @Published var products = [Product]()
     @Published var categories = [String]()
-    @Published var cartViewModel = CartViewModel()
+    @Published var cartViewModel = CartViewModel(cart: Cart(id: Int.random(in: 1...Int.max), userId: 1, date: Date.now), products: [])
     
     let network = NetworkManager()
     private var cancellables = Set<AnyCancellable>()
+    
+    internal init() {
+        $products.sink { [weak self] products in
+            guard let cart = self?.cartViewModel.cart else { return }
+            self?.cartViewModel = CartViewModel(cart: cart, products: products)
+        }
+        .store(in: &cancellables)
+    }
+    
     func fetchProducts() {
         network.request(target: .products, responseType: [Product].self)
             .sink { completion in

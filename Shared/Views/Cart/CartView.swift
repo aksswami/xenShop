@@ -52,15 +52,14 @@ struct CartView: View {
                     }
                     .frame(maxHeight: .infinity)
                     .padding(.top, 5)
-//                    Spacer()
                     LineView()
                     VStack {
                         HStack {
-                            Text("Item Total")
+                            Text("Total Items")
                                 .font(.system(size: 14, weight: .regular, design: .default))
                                 .foregroundColor(XenColor.primaryText)
                             Spacer()
-                            Text("S$1222")
+                            Text("\(cartViewModel.totalItems)")
                                 .font(.system(size: 14, weight: .bold, design: .default))
                                 .foregroundColor(XenColor.primaryText)
                         }
@@ -75,7 +74,7 @@ struct CartView: View {
                                 .font(.system(size: 16, weight: .bold, design: .default))
                                 .foregroundColor(XenColor.primaryText)
                             Spacer()
-                            Text("S$2323")
+                            Text(cartViewModel.orderTotalPrice)
                                 .font(.system(size: 16, weight: .bold, design: .default))
                                 .foregroundColor(XenColor.primaryText)
                         }
@@ -100,6 +99,6 @@ struct CartView: View {
 
 struct CartView_Previews: PreviewProvider {
     static var previews: some View {
-        CartView(cartViewModel: CartViewModel())
+        CartView(cartViewModel: CartViewModel(cart: Cart(id: 1, userId: 1, date: Date.now), products: []))
     }
 }
